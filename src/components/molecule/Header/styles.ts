@@ -5,6 +5,7 @@ export const Container = styled.header`
   height: 6.25rem;
 
   position: fixed;
+  z-index:10;
 
   background-color: var(--dark);
   -webkit-box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.1);
