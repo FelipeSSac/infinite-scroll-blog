@@ -93,6 +93,7 @@ export const Container = styled.section`
   }
 
   @media (max-width: 560px){
+
     .single-article__article{
       width: 95%;
     }
@@ -100,5 +101,12 @@ export const Container = styled.section`
     .single-article__body{
       padding: 0 7rem;
     }
+  }
+
+  @media (max-width: 760px){
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 `;
