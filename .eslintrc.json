@@ -27,6 +27,7 @@
       "react/react-in-jsx-scope":"off",
       "import/prefer-default-export": "off",
       "jsx-a11y/label-has-associated-control": "off",
-      "no-unused-vars":"off"
+      "no-unused-vars":"off",
+      "react/no-danger": "off"
     }
 }
