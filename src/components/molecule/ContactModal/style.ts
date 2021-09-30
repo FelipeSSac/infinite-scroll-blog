@@ -23,9 +23,9 @@ export const Container = styled.div`
   }
 
   .modal-contact__article{
-    width: 90%;
+    width: 95%;
     max-width: 40rem;
-    height: 90%;
+    height: 95%;
     max-height: 50rem;
 
     position: relative;
@@ -149,6 +149,44 @@ export const Container = styled.div`
     height: 1.2rem;
 
     fill: #fff;
+  }
+
+  @media (max-width: 500px) {
+
+    .modal-contact__article{
+      max-width: unset;
+      max-height: 58rem;
+    }
+
+    .modal-contact__article-title{
+      font-size: 2.5rem;
+    }
+
+    .modal-contact__article-label{
+      font-size: 2.2rem;
+    }
+
+    .modal-contact__article-form{
+      width: 90%;
+    }
+
+    .modal-contact__article-input{
+      height: 4rem;
+
+      font-size: 2rem;
+    }
+
+    .modal-contact__article-submit-button{
+      max-width: 13rem;
+      height: 4rem;
+
+      font-size: 1.6rem;
+    }
+
+    .modal-contact__article-submit-icon{
+      width: 1.5rem;
+      height: 1.5rem;
+    }
   }
 
   @keyframes showOpacity {

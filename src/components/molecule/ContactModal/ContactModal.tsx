@@ -47,8 +47,6 @@ export default function ContactModal({ toggle }:IContactModalProps) {
 
   const handleFormContactSubmit = (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
-
-    // console.log(contactFormData);
   };
 
   useOutside(modalRef, toggleModal);
