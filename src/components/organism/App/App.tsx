@@ -1,13 +1,23 @@
-import { BrowserRouter } from 'react-router-dom';
-
-import GlobalStyles from '../../../assets/styles/GlobalStyles';
-import { Layout } from '../Layout';
-
 export default function App() {
   return (
-    <BrowserRouter>
-      <GlobalStyles />
-      <Layout />
-    </BrowserRouter>
+    <div className="App">
+      <header className="App-header">
+        <p>
+          Edit
+          {' '}
+          <code>src/App.tsx</code>
+          {' '}
+          and save to reload.
+        </p>
+        <a
+          className="App-link"
+          href="https://reactjs.org"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Learn React
+        </a>
+      </header>
+    </div>
   );
 }
