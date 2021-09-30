@@ -15,7 +15,7 @@ export default function useOnScreen<T extends HTMLElement = HTMLElement>(
         }
       }, {
         root: null,
-        rootMargin: '0px',
+        rootMargin: '100px',
         threshold: 1.0,
       },
     );
