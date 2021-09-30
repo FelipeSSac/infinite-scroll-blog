@@ -19,6 +19,13 @@ export const Container = styled.div`
     animation: propagation 1s linear infinite;
   }
 
+  &.loading-icon-yellow{
+    .loading-icon__first-child,
+    .loading-icon__second-child{
+      border: 4px solid var(--yellow);
+    }
+  }
+
   .loading-icon__second-child{
     animation-delay: -0.5s;
   }
