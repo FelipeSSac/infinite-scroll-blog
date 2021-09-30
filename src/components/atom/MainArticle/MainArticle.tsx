@@ -1,9 +1,9 @@
 import { useHistory } from 'react-router-dom';
-import { IArticleData } from '../../molecule/InfiniteScrollContent';
+import { IArticleData } from '../../../pages/InfiniteScroll';
 
 import { ReactComponent as DbArrow } from '../../../assets/images/db-arrow.svg';
 import { Container } from './styles';
-import { ensureSummary } from '../../../helpers/ensures';
+import { ensureSummary } from '../../../helpers/ensurers';
 
 interface IMainArticleProps {
   articleContent: IArticleData,

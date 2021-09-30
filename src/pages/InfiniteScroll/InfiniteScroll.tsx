@@ -1,13 +1,15 @@
 import { useEffect, useRef, useState } from 'react';
-import { MainArticle } from '../../atom/MainArticle';
+import { useOnScreen } from '../../helpers/hooks';
+
+import { MainArticle } from '../../components/atom/MainArticle';
+import { LoadingIcon } from '../../components/atom/LoadingIcon';
 
 import { IArticleData } from '.';
-import { api } from '../../../services/api';
+import { api } from '../../services/api';
 
 import { Container } from './styles';
-import { useOnScreen } from '../../../helpers/hooks';
 
-export default function InfiniteScrollContent() {
+export default function InfiniteScroll() {
   const infiniteRef = useRef(null);
   const isOnScreen = useOnScreen(infiniteRef);
 
@@ -45,9 +47,11 @@ export default function InfiniteScrollContent() {
         );
       })}
       {isLoading && (
-        <div>Loading</div>
+        <div className="infinite-scroll__loader">
+          <LoadingIcon />
+        </div>
       )}
-      <span ref={infiniteRef} className="infinite-scroll__pointer">ao</span>
+      <div ref={infiniteRef} className="infinite-scroll__pointer" />
     </Container>
   );
 }

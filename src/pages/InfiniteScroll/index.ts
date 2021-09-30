@@ -1,4 +1,4 @@
-export { default as InfiniteScrollContent } from './InfiniteScrollContent';
+export { default as InfiniteScroll } from './InfiniteScroll';
 
 export interface IArticleData {
   id: string;
