@@ -4,14 +4,14 @@ export const Container = styled.div`
   width: 100%;
   height: 100%;
 
-  position: absolute;
+  position: fixed;
   inset: 0;
-  background-color: var(--softDark);
+  z-index: 11;
 
   display: flex;
   align-items: center;
   justify-content: center;
-  animation: name duration timing-function delay iteration-count direction fill-mode;
+  background-color: var(--softDark);
   animation: 0.2s showOpacity both;
 
   &.modal-contact-hide{

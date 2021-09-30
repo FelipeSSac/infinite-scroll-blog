@@ -8,8 +8,8 @@ import { Container } from './styles';
 import { useOnScreen } from '../../../helpers/hooks';
 
 export default function InfiniteScrollContent() {
-  const ref = useRef(null);
-  const isOnScreen = useOnScreen(ref);
+  const infiniteRef = useRef(null);
+  const isOnScreen = useOnScreen(infiniteRef);
 
   const [articlesData, setArticlesData] = useState([] as Array<IArticleData>);
   const [currentPage, setCurrentPage] = useState(1);
@@ -47,7 +47,7 @@ export default function InfiniteScrollContent() {
       {isLoading && (
         <div>Loading</div>
       )}
-      <span ref={ref} className="infinite-scroll__pointer">ao</span>
+      <span ref={infiniteRef} className="infinite-scroll__pointer">ao</span>
     </Container>
   );
 }

@@ -17,10 +17,58 @@ export default createGlobalStyle`
   html {
     font-size: 16px;
     font-family: 'Rubik', sans-serif;
+
+    &::-webkit-scrollbar {
+      width: 14px;
+    }
+
+    &::-webkit-scrollbar-track {
+      background-color: var(--yellow);
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background: var(--softDark);
+    }
   }
 
   button{
     font-family: 'Rubik', sans-serif;
     cursor: pointer;
+  }
+
+  @media (max-width: 1400px) {
+    html {
+      font-size: 85%;
+    }
+  }
+
+  @media (max-width: 1170px){
+    html {
+      font-size: 72.5%;
+    }
+  }
+
+  @media (max-width: 1000px){
+    html {
+      font-size: 63%;
+    }
+  }
+
+  @media (max-width: 760px){
+    html {
+      font-size: 57.5%;
+    }
+  }
+
+  @media (max-width: 490px){
+    html {
+      font-size: 50%;
+    }
+  }
+
+  @media (max-width: 395px){
+    html {
+      font-size: 43%;
+    }
   }
 `;

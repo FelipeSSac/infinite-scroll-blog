@@ -1,21 +1,26 @@
+import { useHistory } from 'react-router-dom';
 import { IArticleData } from '../../molecule/InfiniteScrollContent';
 
 import { ReactComponent as DbArrow } from '../../../assets/images/db-arrow.svg';
 import { Container } from './styles';
+import { ensureSummary } from '../../../helpers/ensures';
 
 interface IMainArticleProps {
   articleContent: IArticleData,
   index: number;
 }
 
-export default function MainArticle({ articleContent, index }:IMainArticleProps) {
-  const summary = articleContent.article
-    .replace('<p>', '')
-    .split('</p>')[0]
-    .split('.')
-    .slice(0, 2)
-    .join('.')
-    .concat('.');
+export default function MainArticle({
+  articleContent,
+  index,
+}:IMainArticleProps) {
+  const history = useHistory();
+
+  const summary = ensureSummary(articleContent.article);
+
+  const handleShowArticle = (id: string) => {
+    history.push(`/article/${id}`);
+  };
 
   return (
     <Container className={`main-article--${index}`}>
@@ -37,8 +42,12 @@ export default function MainArticle({ articleContent, index }:IMainArticleProps)
           >
             {summary}
           </dd>
-          <button type="button" className="main-article__show-button">
-            <DbArrow />
+          <button
+            type="button"
+            className="main-article__show-button"
+            onClick={() => handleShowArticle(articleContent.id)}
+          >
+            <DbArrow className="main-article__arrow-icon" />
           </button>
         </div>
       </div>
