@@ -35,6 +35,12 @@ export default function Header() {
           >
             Contact
           </button>
+          <Link
+            to="/article/add"
+            className="header__nav-link--new"
+          >
+            New Post
+          </Link>
         </nav>
       </div>
       {showModal && (

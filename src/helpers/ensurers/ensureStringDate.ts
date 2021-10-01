@@ -3,7 +3,7 @@ export default function ensureStringDate(value: string) {
   const dateString = `${date}`;
 
   const [, month, day, year] = dateString.split(' ');
-  const formatedDate = `${month} ${day}, ${year}`;
+  const formattedDate = `${month} ${day}, ${year}`;
 
-  return formatedDate;
+  return formattedDate;
 }
