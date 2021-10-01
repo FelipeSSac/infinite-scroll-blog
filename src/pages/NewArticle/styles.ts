@@ -99,8 +99,7 @@ export const Container = styled.section`
   }
 
   .new-article__button{
-    width: 100%;
-    max-width: 12rem;
+    width: 12rem;
     height: 3.1rem;
     margin: 3rem 0 0;
     padding: 0 2rem;
@@ -141,6 +140,41 @@ export const Container = styled.section`
   @media (max-width: 545px){
     .new-article__label{
       width: 100%;
+    }
+  }
+
+  @media (max-width: 500px) {
+    .new-article__title{
+      font-size: 2.5rem;
+    }
+
+    .new-article__label{
+      font-size: 2.2rem;
+    }
+
+    .new-article__form{
+      width: 90%;
+    }
+
+    .new-article__input{
+      height: 4rem;
+
+      font-size: 2rem;
+    }
+
+    .new-article__button{
+      width: 15rem;
+      height: 3.6rem;
+      margin: 2rem;
+
+      flex: none;
+
+      font-size: 1.6rem;
+    }
+
+    .new-article__button-icon{
+      width: 1.5rem;
+      height: 1.5rem;
     }
   }
 `;

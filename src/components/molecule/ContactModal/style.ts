@@ -121,8 +121,7 @@ export const Container = styled.div`
   }
 
   .modal-contact__article-submit-button{
-    width: 100%;
-    max-width: 11rem;
+    width: 11rem;
     height: 3.1rem;
     padding: 0 2rem;
 
@@ -177,7 +176,7 @@ export const Container = styled.div`
     }
 
     .modal-contact__article-submit-button{
-      max-width: 13rem;
+      width: 13rem;
       height: 4rem;
 
       font-size: 1.6rem;
