@@ -1,46 +1,79 @@
-# Getting Started with Create React App
+<h1 align="center">Marvel Essentials</h1>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<h1 align="center"><img src="./src/screenshots/main-page.png" /></h1>
 
-## Available Scripts
+## ✨ Technologies
 
-In the project directory, you can run:
+This project was developed using the following technologies:
 
-### `yarn start`
+- [React](https://reactjs.org/)
+- [React DOM](https://pt-br.reactjs.org/docs/react-dom.html)
+- [CREATE-REACT-APP](https://github.com/facebook/create-react-app)
+- [TypeScript](https://www.typescriptlang.org/)
+- [Styled-components](https://www.styled-components.com/)
+- [ESLint](https://eslint.org/)
+- [EditorConfig](https://editorconfig.org/)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## 💻 Project
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+### Preview the project [here](https://infinite-scroll-blog-jet.vercel.app/)
 
-### `yarn test`
+React application with infinite scroll, you can checkout the articles on the infinite scroll and at the "New Post" page create them, when an error occur while creating new posts, a message will be displayed at the screen alerting the user, you can also click on the arrow from each article and checkout the article's full information.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## 🔧 Technologies choice
 
-### `yarn build`
+Project developed using the React library to make it a Single Page Application, which guarantees the best performance when running directly in the client's browser, Create React Application tool to configure the environment, TypeScript as the language to guarantee props and state values accordingly as expected from the contract, Styled Components to avoid unnecessary and conflicting component styles, Atomic Design as the design pattern to promote clean maintenance and good coding practices according to ESLint and EditorConfig.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+ ## 🔨 Project Architecture
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+ Project Architecture based on Atomic Design.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+ ```
+ src
+ ├──assets
+ │   ├──images
+ │   └──styles
+ ├──components
+ │   ├──atom
+ │   ├──molecule
+ │   └──organism
+ ├──helpers
+ │   ├──ensurers
+ │   └──hooks
+ ├──pages
+ ├──routes
+ └──services
+ ```
 
-### `yarn eject`
+ ## 🧪 Components
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+ ```
+ Component
+  ├──Component.tsx
+  ├──styles.ts
+  └──index.ts
+ ```
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## 🚀 How to run
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+Clone this repository.
+```bash
+# Run to install dependencies.
+$ yarn
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+# Run to start the project on `localhost:3000`.
+$ yarn start
+```
 
-## Learn More
+## 🚧 How to build
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Clone this repository.
+```bash
+# Run to install dependencies.
+$ yarn
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+# Run to start building the project.
+$ yarn build
+
+# Builded project it´s now available at folder `root/build`
+```
