@@ -104,7 +104,8 @@ export const Container = styled.section`
   }
 
   @media (max-width: 760px){
-    height: 100vh;
+    height: calc(100vh - 6.25rem);
+
     display: flex;
     align-items: center;
     justify-content: center;

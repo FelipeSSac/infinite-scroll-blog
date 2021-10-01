@@ -36,6 +36,10 @@ export default createGlobalStyle`
     cursor: pointer;
   }
 
+  input{
+    font-family: 'Rubik', sans-serif;
+  }
+
   @media (max-width: 1400px) {
     html {
       font-size: 85%;

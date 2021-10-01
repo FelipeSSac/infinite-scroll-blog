@@ -23,6 +23,8 @@ export const Container = styled.header`
   }
 
   .header__logo{
+    min-width: fit-content;
+
     color: #fff;
     text-decoration: none;
     word-spacing: 0.5rem;
@@ -32,7 +34,8 @@ export const Container = styled.header`
 
   .header__nav{
     width: 100%;
-    max-width: 21rem;
+    max-width: 37rem;
+    margin-left: 5rem;
 
     display: flex;
     align-items: center;
@@ -48,5 +51,18 @@ export const Container = styled.header`
     line-height: 2.375rem;
     border: 0;
     outline: none;
+  }
+
+  .header__nav-link--new{
+    width: 10rem;
+
+    color: #fff;
+    border-radius: 30px;
+    background-color: var(--yellow);
+    text-decoration: none;
+    font-size: 1.3rem;
+    font-weight: 700;
+    line-height: 3.1rem;
+    text-align: center;
   }
 `;
