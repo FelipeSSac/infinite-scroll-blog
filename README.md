@@ -1,4 +1,4 @@
-<h1 align="center">Marvel Essentials</h1>
+<h1 align="center">Infinite Scroll blog</h1>
 
 <h1 align="center"><img src="./src/screenshots/main-page.png" /></h1>
 
@@ -29,7 +29,7 @@ Project developed using the React library to make it a Single Page Application, 
  Project Architecture based on Atomic Design.
 
  ```
- src
+  src
  ├──assets
  │   ├──images
  │   └──styles
@@ -42,6 +42,7 @@ Project developed using the React library to make it a Single Page Application, 
  │   └──hooks
  ├──pages
  ├──routes
+ ├──screenshots
  └──services
  ```
 
