@@ -11,6 +11,7 @@ This project was developed using the following technologies:
 - [CREATE-REACT-APP](https://github.com/facebook/create-react-app)
 - [TypeScript](https://www.typescriptlang.org/)
 - [Styled-components](https://www.styled-components.com/)
+- [Axios](https://axios-http.com/docs/intro)
 - [ESLint](https://eslint.org/)
 - [EditorConfig](https://editorconfig.org/)
 
@@ -22,7 +23,7 @@ React application with infinite scroll, you can checkout the articles on the inf
 
 ## 🔧 Technologies choice
 
-Project developed using the React library to make it a Single Page Application, which guarantees the best performance when running directly in the client's browser, Create React Application tool to configure the environment, TypeScript as the language to guarantee props and state values accordingly as expected from the contract, Styled Components to avoid unnecessary and conflicting component styles, Atomic Design as the design pattern to promote clean maintenance and good coding practices according to ESLint and EditorConfig.
+Project developed using the React library to make it a Single Page Application, which guarantees the best performance when running directly in the client's browser, Create React Application tool to configure the environment, TypeScript as the language to guarantee props and state values accordingly as expected from the contract, Axios to fetch data from the API, Styled Components to avoid unnecessary and conflicting component styles, Atomic Design as the design pattern to promote clean maintenance and good coding practices according to ESLint and EditorConfig.
 
  ## 🔨 Project Architecture
 
