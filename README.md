@@ -29,7 +29,7 @@ Project developed using the React library to make it a Single Page Application, 
  Project Architecture based on Atomic Design.
 
  ```
-  src
+ src
  ├──assets
  │   ├──images
  │   └──styles
