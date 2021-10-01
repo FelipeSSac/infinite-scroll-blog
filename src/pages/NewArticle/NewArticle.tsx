@@ -3,6 +3,7 @@ import { useHistory } from 'react-router-dom';
 
 import NewPost from '../../assets/images/new-post.png';
 import { ReactComponent as Pen } from '../../assets/images/pen.svg';
+import { ErrorModal } from '../../components/atom/ErrorModal';
 import { api } from '../../services/api';
 
 import { Container } from './styles';
@@ -13,15 +14,26 @@ interface INewPostFormData {
   authorEmail: string;
   article: string;
   imageUrl: string;
+  date: string;
 }
 
 export default function NewArticle() {
   const history = useHistory();
 
+  const [showModal, setShowModal] = useState(false);
   const [NewPostFormData, setNewPostFormData] = useState({} as INewPostFormData);
 
   const handleInputChange = (event: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = event.target;
+
+    if (name === 'article') {
+      const date = `${new Date()}`;
+
+      setNewPostFormData((prevState) => ({
+        ...prevState,
+        date,
+      }));
+    }
 
     setNewPostFormData((prevState) => ({
       ...prevState,
@@ -37,6 +49,8 @@ export default function NewArticle() {
         const { id } = response.data;
 
         history.push(`/article/${id}`);
+      }).catch((error) => {
+        setShowModal(true);
       });
   };
 
@@ -58,9 +72,11 @@ export default function NewArticle() {
             <input
               type="text"
               name="title"
+              placeholder="Fill the title"
               value={NewPostFormData.title}
               onChange={handleInputChange}
               className="new-article__input"
+              required
             />
           </label>
           <label className="new-article__label">
@@ -68,9 +84,11 @@ export default function NewArticle() {
             <input
               type="text"
               name="author"
+              placeholder="Fill the author name"
               value={NewPostFormData.author}
               onChange={handleInputChange}
               className="new-article__input"
+              required
             />
           </label>
           <label className="new-article__label">
@@ -78,9 +96,11 @@ export default function NewArticle() {
             <input
               type="text"
               name="imageUrl"
+              placeholder="Fill the image URL"
               value={NewPostFormData.imageUrl}
               onChange={handleInputChange}
               className="new-article__input"
+              required
             />
           </label>
           <label className="new-article__label">
@@ -91,6 +111,7 @@ export default function NewArticle() {
               value={NewPostFormData.article}
               onChange={handleInputChange}
               className="new-article__textarea"
+              required
             />
           </label>
           <button className="new-article__button" type="submit">
@@ -98,6 +119,9 @@ export default function NewArticle() {
             Create Post
           </button>
         </form>
+        {showModal && (
+          <ErrorModal toggle={setShowModal} />
+        )}
       </article>
     </Container>
   );
